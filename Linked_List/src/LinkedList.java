@@ -39,19 +39,21 @@ public class LinkedList {
             return null;      
         }else{
             Node temp = head;
-            Node pre  = temp; 
-            while (true) {
+            Node pre  = head; 
+            while (temp.next != null) {
+                pre = temp;
                 temp = temp.next;                
-
-                if(temp.next != null){
-                    pre = temp;                
-                }else{
-                    break;
-                }                
             }   
 
             tail = pre;
             tail.next = null;
+
+            length--;
+
+            if(length == 0){
+                head = null;
+                tail = null;
+            }
 
             return temp.value;
         }

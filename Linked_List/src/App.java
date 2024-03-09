@@ -12,7 +12,8 @@ public class App {
 
         System.out.println("Rmove: " + myLinkedList.removeFinal());
         System.out.println("Rmove: " + myLinkedList.removeFinal());
-
+        System.out.println("Rmove: " + myLinkedList.removeFinal());
+        System.out.println("Rmove: " + myLinkedList.removeFinal());
         myLinkedList.printList();
     }
 }
