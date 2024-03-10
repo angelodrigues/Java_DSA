@@ -1,8 +1,8 @@
 public class LinkedList {
 
     class Node {
-        private int value;
-        private Node next;
+        int value;
+        Node next;
     
         public Node(int value) {
             this.value = value;
@@ -87,7 +87,7 @@ public class LinkedList {
         return temp.value;
     }
 
-    public Integer get(int index){
+    public Node get(int index){
         if(length == 0 || index >= length || index < 0){
             return null;
         }
@@ -99,7 +99,16 @@ public class LinkedList {
             }
         }
 
-        return temp.value;
+        return temp;
+    }
+
+    public boolean set(int index, int value){
+        Node temp = get(index);
+        if(temp != null){
+            temp.value = value;
+            return true;
+        }
+        return false;
     }
 
     public void printList(){

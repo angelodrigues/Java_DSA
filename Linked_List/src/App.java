@@ -8,7 +8,10 @@ public class App {
 
         myLinkedList.printList();
         System.out.println("-------->");
+        myLinkedList.set(1, 100);
         System.out.println(myLinkedList.get(1));
+
+        myLinkedList.printList();
 
         // System.out.println("-------->");
 
