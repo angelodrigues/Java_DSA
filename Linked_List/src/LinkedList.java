@@ -93,10 +93,9 @@ public class LinkedList {
         }
 
         Node temp = head;
-        if(head.next != null){
-            for(int i = 0; i < index; i++){                
-                temp = temp.next;                
-            }
+        
+        for(int i = 0; i < index; i++){                
+            temp = temp.next;                
         }
 
         return temp;
@@ -109,6 +108,25 @@ public class LinkedList {
             return true;
         }
         return false;
+    }
+
+    public boolean insert(int index,int value){
+        if(index < 0 || index > length){
+            return false;
+        }
+        if(index == 0){
+            prepend(value);
+            return true;
+        }else if(index == length){
+            append(value);
+            return true;
+        }
+        Node newNode = new Node(value);
+        Node temp    = get(index - 1);        
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
     }
 
     public void printList(){
