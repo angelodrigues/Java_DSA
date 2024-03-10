@@ -71,6 +71,22 @@ public class LinkedList {
         length++;
     }
 
+    public Integer removeFirst(){
+        if(length == 0){
+            return null;
+        }
+        Node temp = head;
+        head      = head.next;
+        temp.next = null;        
+        
+        length--;
+        if(length == 0){            
+            tail = null;
+        }           
+
+        return temp.value;
+    }
+
     public void printList(){
         Node temp = head;
         while (temp != null) {

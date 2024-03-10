@@ -8,12 +8,27 @@ public class App {
 
         myLinkedList.printList();
 
-        System.out.println("--------> ------> ");
+        System.out.println("-------->");
 
         System.out.println("Rmove: " + myLinkedList.removeFinal());
         System.out.println("Rmove: " + myLinkedList.removeFinal());
-        System.out.println("Rmove: " + myLinkedList.removeFinal());
-        System.out.println("Rmove: " + myLinkedList.removeFinal());
+        
         myLinkedList.printList();
+
+        System.out.println("-------->");
+
+        myLinkedList.prepend(100);
+        myLinkedList.prepend(200);
+
+        myLinkedList.printList();
+
+        System.out.println("-------->");
+
+        myLinkedList.removeFirst();
+        myLinkedList.removeFirst();
+
+        myLinkedList.printList();
+        
+
     }
 }
