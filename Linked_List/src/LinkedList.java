@@ -3,7 +3,7 @@ public class LinkedList {
     class Node {
         int value;
         Node next;
-    
+
         public Node(int value) {
             this.value = value;
         }
@@ -29,21 +29,21 @@ public class LinkedList {
             tail = newNode;
         }else{
             tail.next = newNode;
-            tail = newNode;            
+            tail = newNode;
         }
         length ++;
     }
 
     public Node removeFinal(){
-        if(length == 0){            
-            return null;      
+        if(length == 0){
+            return null;
         }else{
             Node temp = head;
-            Node pre  = head; 
+            Node pre  = head;
             while (temp.next != null) {
                 pre = temp;
-                temp = temp.next;                
-            }   
+                temp = temp.next;
+            }
 
             tail = pre;
             tail.next = null;
@@ -77,12 +77,12 @@ public class LinkedList {
         }
         Node temp = head;
         head      = head.next;
-        temp.next = null;        
-        
+        temp.next = null;
+
         length--;
-        if(length == 0){            
+        if(length == 0){
             tail = null;
-        }           
+        }
 
         return temp;
     }
@@ -93,9 +93,9 @@ public class LinkedList {
         }
 
         Node temp = head;
-        
-        for(int i = 0; i < index; i++){                
-            temp = temp.next;                
+
+        for(int i = 0; i < index; i++){
+            temp = temp.next;
         }
 
         return temp;
@@ -122,7 +122,7 @@ public class LinkedList {
             return true;
         }
         Node newNode = new Node(value);
-        Node temp    = get(index - 1);        
+        Node temp    = get(index - 1);
         newNode.next = temp.next;
         temp.next = newNode;
         length++;
@@ -158,14 +158,14 @@ public class LinkedList {
             after = temp.next;
             temp.next = before;
             before = temp;
-            temp = after;            
+            temp = after;
         }
     }
 
     public Node findMiddleNode(){
         int size = 0;
         Node temp = head;
-        while (temp != null) {          
+        while (temp != null) {
             temp = temp.next;
             size++;
         }
@@ -194,6 +194,18 @@ public class LinkedList {
         }
 
         return slow;
+    }
+
+    public boolean hasLoop(){
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(fast == slow) return true;
+        }
+        return false;
     }
 
     public void printList(){

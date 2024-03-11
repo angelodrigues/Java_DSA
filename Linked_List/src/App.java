@@ -7,10 +7,10 @@ public class App {
         myLinkedList.append(3);   
         myLinkedList.append(4);    
         myLinkedList.append(5);        
-        // myLinkedList.append(6);        
         
+        myLinkedList.printList();
 
-        System.out.println(myLinkedList.findMiddleNodeV2().value);   
+        System.out.println(myLinkedList.hasLoop());   
         // myLinkedList.set(1, 100);
         // myLinkedList.insert(1, 10000);
         // myLinkedList.insert(1, 10000);
