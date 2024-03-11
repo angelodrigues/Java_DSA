@@ -10,7 +10,7 @@ public class App {
         
         myLinkedList.printList();
 
-        System.out.println(myLinkedList.hasLoop());   
+        System.out.println(myLinkedList.findKthFromEnd(1).value);   
         // myLinkedList.set(1, 100);
         // myLinkedList.insert(1, 10000);
         // myLinkedList.insert(1, 10000);
