@@ -222,6 +222,37 @@ public class LinkedList {
         return slow;
     }
 
+    public void partitionList(int x){
+        if(head == null) return;
+
+        Node newNode1 = new Node(0);
+        Node newNode2 = new Node(0);
+
+        Node temp1 = newNode1;
+        Node temp2 = newNode2;
+
+        Node current = head;
+
+        while (current != null) {                    
+            
+            if(current.value < x){
+                temp1.next = current;
+                temp1 = current;
+            }else {
+                temp2.next = current;
+                temp2 = current;
+            }
+            current = current.next;
+        }
+
+        temp2.next = null;
+        temp1.next = newNode2.next;
+
+        head = newNode1.next;
+
+        printList();
+    }
+
     public void printList(){
         Node temp = head;
         while (temp != null) {
