@@ -6,6 +6,7 @@ public class App {
         myLinkedList.append(3);   
         myLinkedList.append(2);
         myLinkedList.append(1);
+        myLinkedList.append(2);
         myLinkedList.append(5);                
         
         
@@ -13,8 +14,10 @@ public class App {
 
         System.out.println("-----------------");
 
+        myLinkedList.removeDuplicates();
 
-        myLinkedList.partitionList(2);
+
+        // myLinkedList.partitionList(3);
 
         // System.out.println(myLinkedList.findKthFromEnd(1).value);   
         // myLinkedList.set(1, 100);
