@@ -296,6 +296,19 @@ public class LinkedList {
         printList();
     }
 
+    public int binaryToDecimal(){        
+        int num = 0;
+        Node current = head;
+        while(current != null){
+            num *= 2;
+            num += current.value;
+
+            current = current.next;
+        }
+
+        return num;
+    }
+
     public void printList(){
         Node temp = head;
         while (temp != null) {

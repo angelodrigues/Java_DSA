@@ -14,7 +14,7 @@ public class App {
 
         System.out.println("-----------------");
 
-        myLinkedList.removeDuplicates();
+        System.out.println(myLinkedList.binaryToDecimal());
 
 
         // myLinkedList.partitionList(3);
